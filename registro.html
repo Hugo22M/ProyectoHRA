@@ -50,53 +50,29 @@
 
     </header>
 
-    <main class="auth-container">
+<main class="auth-container">
 
-        <div class="auth-card">
+    <h2>Crear cuenta</h2>
 
-            <h2>Crear cuenta</h2>
+    <p>
+        Crea una cuenta para poder participar en el foro.
+    </p>
 
-            <p class="auth-subtitulo">
-                Regístrate para participar en el foro y acceder a la web.
-            </p>
+    <form id="formRegistro">
 
-            <form id="formRegistro">
+        <label>Nombre de usuario</label>
+        <input type="text" id="usuario" required>
 
-                <input
-                    type="text"
-                    id="usuario"
-                    placeholder="Nombre de usuario"
-                    required>
+        <label>Contraseña</label>
+        <input type="password" id="password" required>
 
-                <input
-                    type="password"
-                    id="password"
-                    placeholder="Contraseña"
-                    required>
+        <button type="submit">
+            Crear cuenta
+        </button>
 
-                <button type="submit">
-                    Crear cuenta
-                </button>
+    </form>
 
-            </form>
-
-            <p id="mensajeRegistro"></p>
-
-            <div class="auth-extra">
-
-                <p>
-                    ¿Ya tienes cuenta?
-                </p>
-
-                <a href="login.html">
-                    Iniciar sesión
-                </a>
-
-            </div>
-
-        </div>
-
-    </main>
+</main>
 
     <footer>
 
