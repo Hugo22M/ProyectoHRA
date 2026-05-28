@@ -1,100 +1,167 @@
 <!DOCTYPE html>
 <html lang="es">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Proyecto HRA - Tutoriales de Samba</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto HRA - Tutoriales de Samba</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-    <body>
-        <div class="pagina">
+<body>
 
-            <header>
-                <h1>Proyecto HRA</h1>
+<div class="pagina">
 
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="noticias.html">Noticias</a></li>
-                        <li><a href="foro.html">Foro</a></li>
-                        <li><a href="tutoriales.html" class="activo">Tutoriales</a></li>
-                        <li><a href="registro.html">Registro</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
-                        <li><a href="equipo.html">Equipo</a></li>
-                        <li><a href="ia.html">Uso de IA</a></li>
-                    </ul>
-                </nav>
-            </header>
+    <header>
+        <h1>Proyecto HRA</h1>
 
-            <main>
-                <h2>Tutoriales de Samba</h2>
-                <p>Vídeos para aprender Samba.</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+                <li><a href="foro.html">Foro</a></li>
+                <li><a href="tutoriales.html" class="activo">Tutoriales</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
 
-                <div class="video-lista">
+        <div class="usuario-menu" id="menuNoLogin">
+            <a class="usuario-btn" href="login.html">Iniciar sesión</a>
+            <a class="usuario-btn" href="registro.html">Crear cuenta</a>
+        </div>
 
-                    <div class="video">
-                        <iframe src="https://www.youtube.com/embed?listType=search&list=que%20es%20samba%20linux" allowfullscreen></iframe>
-                        <h3>Qué es Samba</h3>
-                        <p>Para qué sirve Samba.</p>
-                    </div>
+        <div class="usuario-menu" id="menuLogin" style="display:none;">
+            <div class="usuario-circulo" id="circuloUsuario"></div>
+            <a class="usuario-btn" href="cuenta.html">Mi cuenta</a>
+            <button class="usuario-btn" onclick="cerrarSesion()">Cerrar sesión</button>
+        </div>
+    </header>
 
-                    <div class="video">
-                        <iframe src="https://www.youtube.com/embed?listType=search&list=configurar%20samba%20ubuntu%20compartir%20carpeta" allowfullscreen></iframe>
-                        <h3>Configurar Samba</h3>
-                        <p>Compartir carpetas en Ubuntu.</p>
-                    </div>
+    <main>
 
-                    <div class="video">
-                        <iframe src="https://www.youtube.com/embed?listType=search&list=acceder%20samba%20desde%20windows" allowfullscreen></iframe>
-                        <h3>Acceso desde Windows</h3>
-                        <p>Entrar a carpetas compartidas.</p>
-                    </div>
+        <h2>Tutoriales de Samba</h2>
 
-                </div>
+        <p>
+            Vídeos para aprender Samba y compartir archivos en red.
+        </p>
 
-                <a class="volver" href="tutoriales.html">Volver a Tutoriales</a>
-            </main>
+        <div class="video-lista">
 
-<footer>
-    <div class="footer-contenido">
+            <div class="video">
 
-        <div class="footer-columna">
-            <h3>Proyecto HRA</h3>
+                <iframe
+                    width="100%"
+                    height="250"
+                    src="https://www.youtube.com/embed/py7p5aYCZsM"
+                    title="Qué es Samba"
+                    frameborder="0"
+                    allowfullscreen>
+                </iframe>
+
+                <h3>Qué es Samba</h3>
+
+                <p>
+                    Introducción y funcionamiento básico de Samba.
+                </p>
+
+            </div>
+
+            <div class="video">
+
+                <iframe
+                    width="100%"
+                    height="250"
+                    src="https://www.youtube.com/embed/lInuZPRxFjE"
+                    title="Configurar Samba"
+                    frameborder="0"
+                    allowfullscreen>
+                </iframe>
+
+                <h3>Configurar Samba</h3>
+
+                <p>
+                    Compartir carpetas entre Linux y Windows.
+                </p>
+
+            </div>
+
+            <div class="video">
+
+                <iframe
+                    width="100%"
+                    height="250"
+                    src="https://www.youtube.com/embed/4ByEwDNRQds"
+                    title="Acceso Samba"
+                    frameborder="0"
+                    allowfullscreen>
+                </iframe>
+
+                <h3>Acceso desde Windows</h3>
+
+                <p>
+                    Cómo acceder a carpetas Samba desde Windows.
+                </p>
+
+            </div>
+
+        </div>
+
+        <a class="volver" href="tutoriales.html">
+            Volver a Tutoriales
+        </a>
+
+    </main>
+
+    <footer>
+
+        <div class="footer-contenido">
+
+            <div class="footer-columna">
+
+                <h3>Proyecto HRA</h3>
+
+                <p>
+                    Web de informática creada como proyecto final de 2º SMR.
+                    Incluye noticias, tutoriales, foro y recursos técnicos.
+                </p>
+
+            </div>
+
+            <div class="footer-columna">
+
+                <h3>Secciones</h3>
+
+                <a href="index.html">Inicio</a>
+                <a href="noticias.html">Noticias</a>
+                <a href="foro.html">Foro</a>
+                <a href="tutoriales.html">Tutoriales</a>
+
+            </div>
+
+            <div class="footer-columna">
+
+                <h3>Acceso</h3>
+
+                <a href="login.html">Iniciar sesión</a>
+                <a href="contacto.html">Contacto</a>
+
+            </div>
+
+        </div>
+
+        <div class="footer-abajo">
 
             <p>
-                Web de informática creada como proyecto final de 2º SMR.
-                Incluye noticias, tutoriales, foro y recursos técnicos.
+                Proyecto HRA - 2º SMR · Hugo, Rodrigo y Antonio
             </p>
-        </div>
-
-        <div class="footer-columna">
-            <h3>Secciones</h3>
-
-            <a href="index.html">Inicio</a>
-            <a href="noticias.html">Noticias</a>
-            <a href="foro.html">Foro</a>
-            <a href="tutoriales.html">Tutoriales</a>
-        </div>
-
-        <div class="footer-columna">
-            <h3>Acceso</h3>
-
-            <a href="login.html">Iniciar sesión</a>
-            <a href="contacto.html">Contacto</a>
-        </div>
-
-    </div>
-
-    <div class="footer-abajo">
-        <p>
-            Proyecto HRA - 2º SMR · Hugo, Rodrigo y Antonio
-        </p>
-    </div>
-</footer>
 
         </div>
-    </body>
 
+    </footer>
+
+</div>
+
+<script src="login.js"></script>
+
+</body>
 </html>
