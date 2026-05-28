@@ -19,9 +19,9 @@ if (formLogin) {
     });
 }
 
-var usuarioActual = localStorage.getItem("usuario");
+var usuarioMenu = localStorage.getItem("usuario");
 
-if (usuarioActual) {
+if (usuarioMenu) {
     var menuNoLogin = document.getElementById("menuNoLogin");
     var menuLogin = document.getElementById("menuLogin");
     var circuloUsuario = document.getElementById("circuloUsuario");
@@ -29,7 +29,7 @@ if (usuarioActual) {
     if (menuNoLogin && menuLogin && circuloUsuario) {
         menuNoLogin.style.display = "none";
         menuLogin.style.display = "flex";
-        circuloUsuario.innerText = usuarioActual.charAt(0).toUpperCase();
+        circuloUsuario.innerText = usuarioMenu.charAt(0).toUpperCase();
     }
 }
 
