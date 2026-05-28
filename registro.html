@@ -1,10 +1,10 @@
 <!DOCTYPE html>
+<html>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto HRA - Registro</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,7 +13,6 @@
 <div class="pagina">
 
     <header>
-
         <h1>Proyecto HRA</h1>
 
         <nav>
@@ -27,104 +26,73 @@
         </nav>
 
         <div class="usuario-menu" id="menuNoLogin">
-            <a class="usuario-btn" href="login.html">
-                Iniciar sesión
-            </a>
-
-            <a class="usuario-btn" href="registro.html">
-                Crear cuenta
-            </a>
+            <a class="usuario-btn" href="login.html">Iniciar sesión</a>
+            <a class="usuario-btn" href="registro.html">Crear cuenta</a>
         </div>
 
         <div class="usuario-menu" id="menuLogin" style="display:none;">
             <div class="usuario-circulo" id="circuloUsuario"></div>
-
-            <a class="usuario-btn" href="cuenta.html">
-                Mi cuenta
-            </a>
-
-            <button class="usuario-btn" onclick="cerrarSesion()">
-                Cerrar sesión
-            </button>
+            <a class="usuario-btn" href="cuenta.html">Mi cuenta</a>
+            <button class="usuario-btn" onclick="cerrarSesion()">Cerrar sesión</button>
         </div>
-
     </header>
 
-<main>
+    <main>
+        <h2>Crear cuenta</h2>
 
-    <h2>Crear cuenta</h2>
+        <p>
+            Crea una cuenta para poder participar en el foro.
+        </p>
 
-    <p>
-        Crea una cuenta para poder participar en el foro.
-    </p>
+        <form id="formRegistro">
+            <label>Nombre de usuario</label>
+            <input type="text" id="usuarioRegistro" required>
 
-    <form id="formRegistro">
+            <label>Contraseña</label>
+            <input type="password" id="passwordRegistro" required>
 
-        <label>Nombre de usuario</label>
-        <input type="text" id="usuarioRegistro" required>
+            <button type="submit">
+                Crear cuenta
+            </button>
+        </form>
+    </main>
 
-        <label>Contraseña</label>
-        <input type="password" id="passwordRegistro" required>
-
-        <button type="submit">
-            Crear cuenta
-        </button>
-
-    </form>
-
-</main>
-    
     <footer>
-
         <div class="footer-contenido">
 
             <div class="footer-columna">
-
                 <h3>Proyecto HRA</h3>
-
                 <p>
                     Web de informática creada como proyecto final de 2º SMR.
                     Incluye noticias, tutoriales, foro y recursos técnicos.
                 </p>
-
             </div>
 
             <div class="footer-columna">
-
                 <h3>Secciones</h3>
-
                 <a href="index.html">Inicio</a>
                 <a href="noticias.html">Noticias</a>
                 <a href="foro.html">Foro</a>
                 <a href="tutoriales.html">Tutoriales</a>
-
             </div>
 
             <div class="footer-columna">
-
                 <h3>Acceso</h3>
-
                 <a href="login.html">Iniciar sesión</a>
                 <a href="contacto.html">Contacto</a>
-
             </div>
 
         </div>
 
         <div class="footer-abajo">
-
             <p>
                 Proyecto HRA - 2º SMR · Hugo, Rodrigo y Antonio
             </p>
-
         </div>
-
     </footer>
 
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="supabase-config.js"></script>
 <script src="login.js"></script>
 <script src="registro.js"></script>
 
