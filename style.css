@@ -236,15 +236,97 @@ button:hover {
 }
 
 footer {
-    background: linear-gradient(135deg, #1e1b4b, #312e81);
-    color: white;
-    padding: 18px 40px;
-    margin-top: auto;
+    margin-top: 80px;
+
+    background: linear-gradient(135deg, #111827, #1e1b4b);
+
+    border-top: 1px solid #2f3a52;
+
+    padding: 55px 40px 22px;
 }
 
+.footer-contenido {
+    max-width: 1200px;
 
+    margin: 0 auto;
 
-/* Zona de usuario */
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr;
+
+    gap: 70px;
+}
+
+.footer-columna h3 {
+    color: #c4b5fd;
+
+    font-size: 24px;
+
+    margin-bottom: 18px;
+}
+
+.footer-columna p {
+    color: #d1d5db;
+
+    line-height: 1.7;
+
+    font-size: 16px;
+}
+
+.footer-columna a {
+    display: block;
+
+    width: fit-content;
+
+    color: #d1d5db;
+
+    text-decoration: none;
+
+    margin-bottom: 14px;
+
+    transition: 0.2s;
+}
+
+.footer-columna a:hover {
+    color: #38bdf8;
+
+    transform: translateX(4px);
+}
+
+.footer-abajo {
+    max-width: 1200px;
+
+    margin: 40px auto 0;
+
+    padding-top: 18px;
+
+    border-top: 1px solid #374151;
+
+    text-align: center;
+}
+
+.footer-abajo p {
+    margin: 0;
+
+    color: #9ca3af;
+
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+
+    .footer-contenido {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+    footer {
+        padding: 40px 20px 20px;
+    }
+
+}
+
 header {
     position: sticky;
 }
