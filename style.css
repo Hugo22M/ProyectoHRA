@@ -467,3 +467,134 @@ header {
         text-align: center;
     }
 }
+
+.inicio-hero {
+    min-height: 360px;
+    border-radius: 18px;
+    padding: 55px 42px;
+    background:
+        linear-gradient(90deg, rgba(11, 16, 32, 0.95), rgba(11, 16, 32, 0.65)),
+        url("img/noticia-pc.svg");
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #2f3a52;
+    display: flex;
+    align-items: center;
+}
+
+.hero-texto {
+    max-width: 650px;
+}
+
+.etiqueta {
+    display: inline-block;
+    padding: 7px 12px;
+    border-radius: 999px;
+    background: rgba(79, 70, 229, 0.35);
+    color: #93c5fd;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+}
+
+.inicio-hero h2 {
+    font-size: 48px;
+    line-height: 1.1;
+    margin-bottom: 18px;
+    color: white;
+}
+
+.inicio-hero h2 strong {
+    color: #38bdf8;
+}
+
+.inicio-hero p {
+    font-size: 17px;
+    max-width: 560px;
+}
+
+.hero-botones {
+    display: flex;
+    gap: 14px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+}
+
+.boton-principal,
+.boton-secundario {
+    display: inline-block;
+    padding: 12px 18px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.boton-principal {
+    background: #38bdf8;
+    color: #0f172a;
+}
+
+.boton-secundario {
+    background: #172033;
+    color: white;
+    border: 1px solid #334155;
+}
+
+.estadisticas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 28px;
+    border: 1px solid #2f3a52;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #111827;
+}
+
+.estadisticas div {
+    padding: 20px;
+    border-right: 1px solid #2f3a52;
+}
+
+.estadisticas div:last-child {
+    border-right: none;
+}
+
+.estadisticas strong {
+    display: block;
+    color: #38bdf8;
+    font-size: 32px;
+}
+
+.estadisticas span {
+    color: #9ca3af;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.secciones-inicio {
+    margin-top: 36px;
+}
+
+.card .boton-card {
+    margin-top: 14px;
+}
+
+@media (max-width: 768px) {
+    .inicio-hero {
+        padding: 32px 20px;
+        min-height: auto;
+    }
+
+    .inicio-hero h2 {
+        font-size: 34px;
+    }
+
+    .estadisticas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .estadisticas div {
+        border-bottom: 1px solid #2f3a52;
+    }
+}
