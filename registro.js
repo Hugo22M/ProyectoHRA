@@ -16,7 +16,6 @@ if (formRegistro) {
         localStorage.setItem("passwordRegistrada", password);
 
         alert("Cuenta creada correctamente");
-
         window.location.href = "login.html";
     });
 }
