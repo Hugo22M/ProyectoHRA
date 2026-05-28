@@ -501,14 +501,22 @@ header {
 }
 
 .inicio {
-    min-height: 70vh;
+    min-height: 48vh;
 
     display: flex;
     align-items: center;
 
-    padding: 80px 20px;
+    padding: 40px 20px 20px 20px;
 
     position: relative;
+}
+
+.noticias-actuales {
+    margin-top: 40px;
+}
+
+.secciones-inicio {
+    margin-top: 70px;
 }
 
 .texto-inicio {
