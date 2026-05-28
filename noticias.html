@@ -1,116 +1,139 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Proyecto HRA - Noticias</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto HRA - Noticias</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-    <body>
-        <div class="pagina">
+<body>
 
-            <header>
-                <h1>Proyecto HRA</h1>
-            
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="noticias.html">Noticias</a></li>
-                        <li><a href="foro.html">Foro</a></li>
-                        <li><a href="tutoriales.html">Tutoriales</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
-                    </ul>
-                </nav>
-            
-                <div class="usuario-menu" id="menuNoLogin">
-                    <a class="usuario-btn" href="login.html">Iniciar sesión</a>
-                    <a class="usuario-btn" href="registro.html">Crear cuenta</a>
-                </div>
-            
-                <div class="usuario-menu" id="menuLogin" style="display:none;">
-                    <div class="usuario-circulo" id="circuloUsuario"></div>
-                    <a class="usuario-btn" href="cuenta.html">Mi cuenta</a>
-                    <button class="usuario-btn" onclick="cerrarSesion()">Cerrar sesión</button>
-                </div>
-            </header>
+<div class="pagina">
 
-            <main>
-                <h2>Noticias de informática</h2>
+    <header>
+        <h1>Proyecto HRA</h1>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="noticias.html" class="activo">Noticias</a></li>
+                <li><a href="foro.html">Foro</a></li>
+                <li><a href="tutoriales.html">Tutoriales</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="usuario-menu" id="menuNoLogin">
+            <a class="usuario-btn" href="login.html">Iniciar sesión</a>
+            <a class="usuario-btn" href="registro.html">Crear cuenta</a>
+        </div>
+
+        <div class="usuario-menu" id="menuLogin" style="display:none;">
+            <div class="usuario-circulo" id="circuloUsuario"></div>
+            <a class="usuario-btn" href="cuenta.html">Mi cuenta</a>
+            <button class="usuario-btn" onclick="cerrarSesion()">Cerrar sesión</button>
+        </div>
+    </header>
+
+    <main>
+
+        <h2>Últimas Noticias</h2>
+
+        <div class="cards noticias-grid">
+
+            <div class="card noticia-card">
+                <img src="img/noticia-nvidia.png" alt="Nvidia">
+
+                <h3>Nvidia bate récords gracias al auge de la inteligencia artificial</h3>
 
                 <p>
-                    En esta sección se mostrarán noticias y novedades relacionadas
-                    con el mundo de la informática, los componentes de ordenador
-                    y los sistemas operativos.
+                    Nvidia continúa liderando el mercado tecnológico gracias al aumento
+                    de demanda de GPUs para centros de datos y procesamiento avanzado.
                 </p>
 
-                <div class="cards">
-                    <div class="card">
-                        <h3>Nuevos procesadores</h3>
-                        <p>
-                            Las nuevas generaciones de CPU ofrecen mejoras en potencia,
-                            eficiencia y rendimiento multitarea.
-                        </p>
-                    </div>
+                <a class="boton-card" href="noticia1.html">
+                    Leer más
+                </a>
+            </div>
 
-                    <div class="card">
-                        <h3>Actualizaciones de Windows</h3>
-                        <p>
-                            Microsoft sigue incorporando funciones de seguridad,
-                            estabilidad y productividad en sus sistemas.
-                        </p>
-                    </div>
+            <div class="card noticia-card">
+                <img src="img/noticia-pc.png" alt="Windows">
 
-                    <div class="card">
-                        <h3>Avances en almacenamiento</h3>
-                        <p>
-                            Las unidades SSD NVMe siguen creciendo por su velocidad
-                            y por su uso cada vez más extendido.
-                        </p>
-                    </div>
-                </div>
-            </main>
+                <h3>Microsoft prepara nuevas funciones para Windows 11</h3>
 
-<footer>
-    <div class="footer-contenido">
+                <p>
+                    Microsoft sigue trabajando en futuras actualizaciones de Windows 11
+                    centradas en productividad, rendimiento y nuevas herramientas.
+                </p>
 
-        <div class="footer-columna">
-            <h3>Proyecto HRA</h3>
+                <a class="boton-card" href="noticia2.html">
+                    Leer más
+                </a>
+            </div>
 
+            <div class="card noticia-card">
+                <img src="img/noticia-ciberseguridad.png" alt="Ciberseguridad">
+
+                <h3>La ciberseguridad se convierte en prioridad para las empresas</h3>
+
+                <p>
+                    El aumento de ataques informáticos obliga a compañías y gobiernos
+                    a reforzar sus sistemas de protección digital.
+                </p>
+
+                <a class="boton-card" href="noticia3.html">
+                    Leer más
+                </a>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+
+        <div class="footer-contenido">
+
+            <div class="footer-columna">
+                <h3>Proyecto HRA</h3>
+
+                <p>
+                    Web de informática creada como proyecto final de 2º SMR.
+                    Incluye noticias, tutoriales, foro y recursos técnicos.
+                </p>
+            </div>
+
+            <div class="footer-columna">
+                <h3>Secciones</h3>
+
+                <a href="index.html">Inicio</a>
+                <a href="noticias.html">Noticias</a>
+                <a href="foro.html">Foro</a>
+                <a href="tutoriales.html">Tutoriales</a>
+            </div>
+
+            <div class="footer-columna">
+                <h3>Acceso</h3>
+
+                <a href="login.html">Iniciar sesión</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+
+        </div>
+
+        <div class="footer-abajo">
             <p>
-                Web de informática creada como proyecto final de 2º SMR.
-                Incluye noticias, tutoriales, foro y recursos técnicos.
+                Proyecto HRA - 2º SMR · Hugo, Rodrigo y Antonio
             </p>
         </div>
 
-        <div class="footer-columna">
-            <h3>Secciones</h3>
+    </footer>
 
-            <a href="index.html">Inicio</a>
-            <a href="noticias.html">Noticias</a>
-            <a href="foro.html">Foro</a>
-            <a href="tutoriales.html">Tutoriales</a>
-        </div>
+</div>
 
-        <div class="footer-columna">
-            <h3>Acceso</h3>
+<script src="login.js"></script>
 
-            <a href="login.html">Iniciar sesión</a>
-            <a href="contacto.html">Contacto</a>
-        </div>
-
-    </div>
-
-    <div class="footer-abajo">
-        <p>
-            Proyecto HRA - 2º SMR · Hugo, Rodrigo y Antonio
-        </p>
-    </div>
-</footer>
-
-        </div>
-        <script src="auth.js"></script>
-    </body>
-
+</body>
 </html>
