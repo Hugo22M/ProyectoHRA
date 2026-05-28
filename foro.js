@@ -4,7 +4,7 @@ const mensajesForo = document.getElementById("mensajesForo");
 const avisoLogin = document.getElementById("avisoLogin");
 const zonaPublicar = document.getElementById("zonaPublicar");
 
-const usuarioActual = localStorage.getItem("usuario");
+var usuarioActual = localStorage.getItem("usuario");
 
 if (!usuarioActual) {
     zonaPublicar.style.display = "none";
