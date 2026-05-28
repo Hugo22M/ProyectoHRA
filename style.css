@@ -53,14 +53,10 @@ header {
     color: white;
     padding: 24px 40px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+
     position: sticky;
     top: 0;
     z-index: 1000;
-    backdrop-filter: blur(12px);
-    background: rgba(79, 70, 229, 0.92);
 }
 
 header h1 {
