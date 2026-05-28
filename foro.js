@@ -1,3 +1,4 @@
+javascript
 const formForo = document.getElementById("formForo");
 const mensajeForo = document.getElementById("mensajeForo");
 const mensajesForo = document.getElementById("mensajesForo");
@@ -15,6 +16,7 @@ if (!usuarioActual) {
 }
 
 async function cargarMensajes() {
+
     mensajesForo.innerHTML = "<p>Cargando mensajes...</p>";
 
     const { data, error } = await supabaseClient
@@ -23,7 +25,8 @@ async function cargarMensajes() {
         .order("fecha", { ascending: false });
 
     if (error) {
-        mensajesForo.innerHTML = "<p>No se han podido cargar los mensajes. Revisa la configuración de Supabase.</p>";
+        console.log(error);
+        mensajesForo.innerHTML = "<p>Error al cargar mensajes.</p>";
         return;
     }
 
@@ -35,7 +38,9 @@ async function cargarMensajes() {
     mensajesForo.innerHTML = "";
 
     data.forEach(function (mensaje) {
+
         const caja = document.createElement("div");
+
         caja.className = "foro-mensaje";
 
         const fecha = new Date(mensaje.fecha).toLocaleString("es-ES");
@@ -44,6 +49,10 @@ async function cargarMensajes() {
             <strong>${mensaje.usuario}</strong>
             <span class="foro-fecha">${fecha}</span>
             <p>${mensaje.mensaje}</p>
+
+            <button onclick="borrarMensaje(${mensaje.id})" class="btn-borrar">
+                Borrar
+            </button>
         `;
 
         mensajesForo.appendChild(caja);
@@ -51,7 +60,9 @@ async function cargarMensajes() {
 }
 
 if (formForo) {
+
     formForo.addEventListener("submit", async function (e) {
+
         e.preventDefault();
 
         const texto = mensajeForo.value.trim();
@@ -71,13 +82,37 @@ if (formForo) {
             ]);
 
         if (error) {
-            alert("Error al publicar el mensaje.");
+            console.log(error);
+            alert(error.message);
             return;
         }
 
         mensajeForo.value = "";
+
         cargarMensajes();
     });
+}
+
+async function borrarMensaje(id) {
+
+    var confirmar = confirm("¿Quieres borrar este mensaje?");
+
+    if (!confirmar) {
+        return;
+    }
+
+    const { error } = await supabaseClient
+        .from("mensajes_foro")
+        .delete()
+        .eq("id", id);
+
+    if (error) {
+        console.log(error);
+        alert("Error al borrar mensaje");
+        return;
+    }
+
+    cargarMensajes();
 }
 
 cargarMensajes();
