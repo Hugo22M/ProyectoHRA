@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>La ciberseguridad se convierte en prioridad</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="pagina">
+
+<header>
+    <h1>Proyecto HRA</h1>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li><a href="foro.html">Foro</a></li>
+            <li><a href="tutoriales.html">Tutoriales</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <div class="usuario-menu" id="menuNoLogin">
+        <a class="usuario-btn" href="login.html">Iniciar sesión</a>
+        <a class="usuario-btn" href="registro.html">Crear cuenta</a>
+    </div>
+
+    <div class="usuario-menu" id="menuLogin" style="display:none;">
+        <div class="usuario-circulo" id="circuloUsuario"></div>
+        <a class="usuario-btn" href="cuenta.html">Mi cuenta</a>
+        <button class="usuario-btn" onclick="cerrarSesion()">Cerrar sesión</button>
+    </div>
+</header>
+
+<main class="pagina-noticia">
+
+    <article class="noticia-detalle">
+
+        <img src="img/noticia-ciberseguridad.png" class="imagen-noticia">
+
+        <div class="contenido-noticia">
+
+            <span class="fecha-noticia">
+                28 MAYO 2026 · CIBERSEGURIDAD
+            </span>
+
+            <h2>
+                La ciberseguridad se convierte en prioridad para las empresas
+            </h2>
+
+            <p>
+                El aumento de ataques informáticos está haciendo que la ciberseguridad
+                sea una de las áreas más importantes dentro del mundo tecnológico.
+            </p>
+
+            <p>
+                Empresas, centros educativos y administraciones públicas dependen cada
+                vez más de sistemas digitales, por lo que proteger la información se ha
+                convertido en una necesidad fundamental.
+            </p>
+
+            <p>
+                Los ataques mediante phishing, malware y robo de credenciales siguen
+                siendo algunas de las amenazas más habituales para usuarios y compañías.
+            </p>
+
+            <p>
+                Por este motivo, muchas organizaciones están reforzando sus sistemas
+                de protección, formando a sus trabajadores y aplicando medidas como
+                contraseñas seguras, copias de seguridad y autenticación en dos pasos.
+            </p>
+
+            <p>
+                Los expertos coinciden en que la ciberseguridad seguirá creciendo durante
+                los próximos años debido al aumento de servicios online y dispositivos
+                conectados a Internet.
+            </p>
+
+            <p class="fuente-noticia">
+                Fuente: El País Tecnología / Xataka
+            </p>
+
+            <a class="volver" href="noticias.html">
+                Volver a noticias
+            </a>
+
+        </div>
+
+    </article>
+
+</main>
+
+<footer>
+    <div class="footer-contenido">
+
+        <div class="footer-columna">
+            <h3>Proyecto HRA</h3>
+
+            <p>
+                Web de informática creada como proyecto final de 2º SMR.
+                Incluye noticias, tutoriales, foro y recursos técnicos.
+            </p>
+        </div>
+
+        <div class="footer-columna">
+            <h3>Secciones</h3>
+
+            <a href="index.html">Inicio</a>
+            <a href="noticias.html">Noticias</a>
+            <a href="foro.html">Foro</a>
+            <a href="tutoriales.html">Tutoriales</a>
+        </div>
+
+        <div class="footer-columna">
+            <h3>Acceso</h3>
+
+            <a href="login.html">Iniciar sesión</a>
+            <a href="contacto.html">Contacto</a>
+        </div>
+
+    </div>
+
+    <div class="footer-abajo">
+        <p>
+            Proyecto HRA - 2º SMR · Hugo, Rodrigo y Antonio
+        </p>
+    </div>
+</footer>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
+<script src="login.js"></script>
+
+</body>
+</html>
