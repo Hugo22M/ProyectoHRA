@@ -14,7 +14,7 @@
 
             <header>
                 <h1>Proyecto HRA</h1>
-
+            
                 <nav>
                     <ul>
                         <li><a href="index.html">Inicio</a></li>
@@ -22,23 +22,19 @@
                         <li><a href="foro.html">Foro</a></li>
                         <li><a href="tutoriales.html">Tutoriales</a></li>
                         <li><a href="contacto.html">Contacto</a></li>
-                        <li><a href="equipo.html" class="activo">Equipo</a></li>
-                        <li><a href="ia.html">Uso de IA</a></li>
                     </ul>
                 </nav>
-
-
+            
                 <div class="usuario-menu" id="menuNoLogin">
-                    <a href="login.html">Iniciar sesión</a>
-                    <a href="registro.html">Crear cuenta</a>
+                    <a class="usuario-btn" href="login.html">Iniciar sesión</a>
+                    <a class="usuario-btn" href="registro.html">Crear cuenta</a>
                 </div>
-
-                <div class="usuario-menu" id="menuLogin">
+            
+                <div class="usuario-menu" id="menuLogin" style="display:none;">
                     <div class="usuario-circulo" id="circuloUsuario"></div>
-                    <a href="cuenta.html">Mi cuenta</a>
-                    <button type="button" onclick="cerrarSesion()">Cerrar sesión</button>
+                    <a class="usuario-btn" href="cuenta.html">Mi cuenta</a>
+                    <button class="usuario-btn" onclick="cerrarSesion()">Cerrar sesión</button>
                 </div>
-
             </header>
 
             <main>
@@ -93,7 +89,8 @@
 </footer>
 
         </div>
-        <script src="auth.js"></script>
+        <script src="auth.js"></script
+        <script src="login.js"></script>
     </body>
 
 </html>
