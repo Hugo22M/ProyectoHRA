@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Proyecto HRA - Contacto</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="pagina">
+
+            <header>
+                <h1>Proyecto HRA</h1>
+
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="noticias.html">Noticias</a></li>
+                        <li><a href="foro.html">Foro</a></li>
+                        <li><a href="tutoriales.html">Tutoriales</a></li>
+                        <li><a href="registro.html">Registro</a></li>
+                        <li><a href="contacto.html" class="activo">Contacto</a></li>
+                        <li><a href="equipo.html">Equipo</a></li>
+                        <li><a href="ia.html">Uso de IA</a></li>
+                    </ul>
+                </nav>
+
+
+                <div class="usuario-menu" id="menuNoLogin">
+                    <a href="login.html">Iniciar sesión</a>
+                    <a href="registro.html">Crear cuenta</a>
+                </div>
+
+                <div class="usuario-menu" id="menuLogin">
+                    <div class="usuario-circulo" id="circuloUsuario"></div>
+                    <a href="cuenta.html">Mi cuenta</a>
+                    <button type="button" onclick="cerrarSesion()">Cerrar sesión</button>
+                </div>
+
+            </header>
+
+            <main>
+                <h2>Contacto</h2>
+
+                <p>
+                    Este formulario permite enviar consultas o sugerencias relacionadas
+                    con el proyecto. Más adelante podrá conectarse a un sistema real
+                    de gestión de mensajes.
+                </p>
+
+                <form>
+                    <label>Nombre</label>
+                    <input type="text">
+
+                    <label>Email</label>
+                    <input type="email">
+
+                    <label>Mensaje</label>
+                    <textarea></textarea>
+
+                    <button>Enviar</button>
+                </form>
+            </main>
+
+            <footer>
+                <p>Proyecto HRA - 2º SMR</p>
+            </footer>
+
+        </div>
+        <script src="auth.js"></script>
+    </body>
+
+</html>

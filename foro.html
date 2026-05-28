@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Proyecto HRA - Foro</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="pagina">
+
+            <header>
+                <h1>Proyecto HRA</h1>
+
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="noticias.html">Noticias</a></li>
+                        <li><a href="foro.html" class="activo">Foro</a></li>
+                        <li><a href="tutoriales.html">Tutoriales</a></li>
+                        <li><a href="registro.html">Registro</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="equipo.html">Equipo</a></li>
+                        <li><a href="ia.html">Uso de IA</a></li>
+                    </ul>
+                </nav>
+
+                <div class="usuario-menu" id="menuNoLogin">
+                    <a class="usuario-btn" href="login.html">Iniciar sesión</a>
+                    <a class="usuario-btn" href="registro.html">Crear cuenta</a>
+                </div>
+
+                <div class="usuario-menu" id="menuLogin" style="display:none;">
+                    <div class="usuario-circulo" id="circuloUsuario"></div>
+                    <a class="usuario-btn" href="cuenta.html">Mi cuenta</a>
+                    <button class="usuario-btn" onclick="cerrarSesion()">Cerrar sesión</button>
+                </div>
+            </header>
+
+            <main>
+                <h2>Foro de informática</h2>
+
+                <p>
+                    En este apartado los usuarios registrados pueden publicar mensajes.
+                    Los mensajes se guardan en Supabase y pueden verlos todos los visitantes.
+                </p>
+
+                <div id="avisoLogin" class="foro-aviso" style="display:none;">
+                    <p>
+                        Para escribir en el foro tienes que iniciar sesión.
+                        Puedes leer los mensajes sin iniciar sesión.
+                    </p>
+                    <a class="boton-card" href="login.html">Iniciar sesión</a>
+                </div>
+
+                <div id="zonaPublicar" class="foro-caja">
+                    <h3>Publicar mensaje</h3>
+
+                    <form id="formForo">
+                        <label>Mensaje</label>
+                        <textarea id="mensajeForo" placeholder="Escribe aquí tu mensaje..."></textarea>
+
+                        <button type="submit">Publicar</button>
+                    </form>
+                </div>
+
+                <div class="foro-caja">
+                    <h3>Mensajes del foro</h3>
+                    <div id="mensajesForo"></div>
+                </div>
+            </main>
+
+            <footer>
+                <p>Proyecto HRA - 2º SMR</p>
+            </footer>
+
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+        <script src="supabase-config.js"></script>
+        <script src="login.js"></script>
+        <script src="foro.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Proyecto HRA - Registro</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="pagina">
+
+            <header>
+                <h1>Proyecto HRA</h1>
+
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="noticias.html">Noticias</a></li>
+                        <li><a href="foro.html">Foro</a></li>
+                        <li><a href="tutoriales.html">Tutoriales</a></li>
+                        <li><a href="registro.html" class="activo">Registro</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="equipo.html">Equipo</a></li>
+                        <li><a href="ia.html">Uso de IA</a></li>
+                    </ul>
+                </nav>
+
+
+                <div class="usuario-menu" id="menuNoLogin">
+                    <a href="login.html">Iniciar sesión</a>
+                    <a href="registro.html">Crear cuenta</a>
+                </div>
+
+                <div class="usuario-menu" id="menuLogin">
+                    <div class="usuario-circulo" id="circuloUsuario"></div>
+                    <a href="cuenta.html">Mi cuenta</a>
+                    <button type="button" onclick="cerrarSesion()">Cerrar sesión</button>
+                </div>
+
+            </header>
+
+            <main>
+                <h2>Crear cuenta</h2>
+
+                <p>
+                    Crea una cuenta con un nombre de usuario y una contraseña.
+                    Después podrás iniciar sesión desde la web.
+                </p>
+
+                <form id="formRegistro">
+                    <label>Nombre de usuario</label>
+                    <input type="text" id="nuevoUsuario" required>
+
+                    <label>Contraseña</label>
+                    <input type="password" id="nuevaPassword" required>
+
+                    <button type="submit">Crear cuenta</button>
+                </form>
+            </main>
+
+            <footer>
+                <p>Proyecto HRA - 2º SMR</p>
+            </footer>
+
+        </div>
+        <script src="auth.js"></script>
+        <script src="registro.js"></script>
+    </body>
+
+</html>

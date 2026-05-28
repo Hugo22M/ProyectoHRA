@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Proyecto HRA - Inicio</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="pagina">
+
+            <header>
+                <h1>Proyecto HRA</h1>
+
+                <nav>
+                    <ul>
+                        <li><a href="index.html" class="activo">Inicio</a></li>
+                        <li><a href="noticias.html">Noticias</a></li>
+                        <li><a href="foro.html">Foro</a></li>
+                        <li><a href="tutoriales.html">Tutoriales</a></li>
+                        <li><a href="registro.html">Registro</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="equipo.html">Equipo</a></li>
+                        <li><a href="ia.html">Uso de IA</a></li>
+                    </ul>
+                </nav>
+
+
+                <div class="usuario-menu" id="menuNoLogin">
+                    <a href="login.html">Iniciar sesión</a>
+                    <a href="registro.html">Crear cuenta</a>
+                </div>
+
+                <div class="usuario-menu" id="menuLogin">
+                    <div class="usuario-circulo" id="circuloUsuario"></div>
+                    <a href="cuenta.html">Mi cuenta</a>
+                    <button type="button" onclick="cerrarSesion()">Cerrar sesión</button>
+                </div>
+
+            </header>
+
+            <main>
+                <div class="hero">
+                    <h2>Bienvenido a Proyecto HRA</h2>
+
+                    <p>
+                        Proyecto HRA es una plataforma web pensada como punto de encuentro
+                        para personas interesadas en la informática, el hardware,
+                        la configuración de equipos y los servicios en red.
+                    </p>
+                </div>
+
+                <div class="bloque-destacado">
+                    <p>
+                        Esta web reúne en un mismo espacio noticias de informática,
+                        foros sobre componentes, videotutoriales, formularios de contacto
+                        y apartados dedicados a Windows, Linux y redes.
+                    </p>
+                </div>
+
+
+
+                <section class="noticias-actuales">
+                    <h2>Top 3 noticias actuales de informática</h2>
+
+                    <div class="cards noticias-grid">
+                        <div class="card noticia-card">
+                            <img src="img/noticia-nvidia.svg" alt="Centro de datos e inteligencia artificial">
+                            <h3>Nvidia refuerza su apuesta por la IA</h3>
+                            <p>
+                                La inteligencia artificial sigue empujando el mercado del hardware,
+                                especialmente en tarjetas gráficas, centros de datos y nuevos chips especializados.
+                            </p>
+                        </div>
+
+                        <div class="card noticia-card">
+                            <img src="img/noticia-pc.svg" alt="Componentes de ordenador y PC con IA">
+                            <h3>Los nuevos PCs se centran en la IA</h3>
+                            <p>
+                                Los fabricantes están dando más importancia a procesadores con NPU,
+                                gráficas más potentes y equipos preparados para ejecutar tareas de IA.
+                            </p>
+                        </div>
+
+                        <div class="card noticia-card">
+                            <img src="img/noticia-ciberseguridad.svg" alt="Escudo de ciberseguridad">
+                            <h3>La ciberseguridad gana importancia</h3>
+                            <p>
+                                Los ataques informáticos a empresas, administraciones y servicios online
+                                hacen que la protección de datos sea una prioridad cada vez mayor.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="cards">
+                    <div class="card">
+                        <h3>Noticias</h3>
+                        <p>
+                            Espacio reservado para novedades sobre tecnología,
+                            hardware y software.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Foro técnico</h3>
+                        <p>
+                            Sección pensada para dudas y debates sobre componentes
+                            de ordenador.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Tutoriales</h3>
+                        <p>
+                            Zona preparada para contenidos prácticos sobre montaje,
+                            configuración y red.
+                        </p>
+                    </div>
+                </div>
+            </main>
+
+            <footer>
+                <p>Proyecto HRA - 2º SMR</p>
+            </footer>
+
+        </div>
+        <script src="auth.js"></script>
+    </body>
+
+</html>
