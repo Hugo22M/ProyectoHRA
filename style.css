@@ -748,3 +748,95 @@ header {
         font-size: 16px;
     }
 }
+
+.tutoriales-portada {
+    max-width: 1300px;
+    margin: 50px auto;
+    padding: 30px;
+}
+
+.tutoriales-titulo {
+    max-width: 680px;
+    margin-bottom: 45px;
+}
+
+.tutoriales-titulo h2 {
+    font-size: clamp(46px, 7vw, 82px);
+    line-height: 1.08;
+    font-weight: 300;
+    color: white;
+    margin-bottom: 28px;
+}
+
+.tutoriales-titulo p {
+    max-width: 560px;
+    border-top: 1px solid rgba(255,255,255,0.35);
+    padding-top: 28px;
+    color: white;
+    font-size: 18px;
+}
+
+.tutoriales-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.tutorial-card {
+    min-height: 230px;
+    border: 1px solid rgba(255,255,255,0.35);
+    border-radius: 28px;
+    padding: 28px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background: rgba(10, 15, 35, 0.25);
+    transition: 0.25s ease;
+}
+
+.tutorial-card:hover {
+    transform: translateY(-5px);
+    border-color: #38bdf8;
+    background: rgba(56,189,248,0.08);
+}
+
+.tutorial-card h3 {
+    font-size: 30px;
+    line-height: 1.15;
+    color: white;
+    margin: 0;
+}
+
+.tutorial-card a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    align-self: flex-end;
+}
+
+.tutorial-card a:hover {
+    color: #38bdf8;
+}
+
+@media (max-width: 900px) {
+    .tutoriales-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .tutoriales-portada {
+        margin: 25px auto;
+        padding: 18px;
+    }
+
+    .tutoriales-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tutorial-card {
+        min-height: 180px;
+    }
+}
