@@ -44,15 +44,22 @@ async function cargarMensajes() {
 
         const fecha = new Date(mensaje.fecha).toLocaleString("es-ES");
 
-        caja.innerHTML = `
-            <strong>${mensaje.usuario}</strong>
-            <span class="foro-fecha">${fecha}</span>
-            <p>${mensaje.mensaje}</p>
 
-            <button onclick="borrarMensaje(${mensaje.id})" class="btn-borrar">
+    caja.innerHTML = `
+        <strong>${mensaje.usuario}</strong>
+        <span class="foro-fecha">${fecha}</span>
+        <p>${mensaje.mensaje}</p>
+    
+        ${
+            mensaje.usuario === usuarioActual
+            ? `<button onclick="borrarMensaje(${mensaje.id})" class="btn-borrar">
                 Borrar
-            </button>
-        `;
+               </button>`
+            : ""
+        }
+    `;
+
+
 
         mensajesForo.appendChild(caja);
     });
