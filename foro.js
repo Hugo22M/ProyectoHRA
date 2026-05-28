@@ -1,4 +1,3 @@
-javascript
 const formForo = document.getElementById("formForo");
 const mensajeForo = document.getElementById("mensajeForo");
 const mensajesForo = document.getElementById("mensajesForo");
