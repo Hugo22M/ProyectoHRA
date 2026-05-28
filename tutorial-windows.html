@@ -1,111 +1,147 @@
 <!DOCTYPE html>
 <html lang="es">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Proyecto HRA - Tutoriales de Windows</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto HRA - Tutoriales de Windows</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-    <body>
-        <div class="pagina">
+<body>
 
-            <header>
-                <h1>Proyecto HRA</h1>
+<div class="pagina">
 
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="noticias.html">Noticias</a></li>
-                        <li><a href="foro.html">Foro</a></li>
-                        <li><a href="tutoriales.html" class="activo">Tutoriales</a></li>
-                        <li><a href="registro.html">Registro</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
-                        <li><a href="equipo.html">Equipo</a></li>
-                        <li><a href="ia.html">Uso de IA</a></li>
-                    </ul>
-                </nav>
-            </header>
+    <header>
+        <h1>Proyecto HRA</h1>
 
-            <main>
-                <h2>Tutoriales de Windows</h2>
-                <p>Vídeos para aprender Windows desde lo básico.</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+                <li><a href="foro.html">Foro</a></li>
+                <li><a href="tutoriales.html" class="activo">Tutoriales</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
 
-                <div class="video-lista">
+        <div class="usuario-menu" id="menuNoLogin">
+            <a class="usuario-btn" href="login.html">Iniciar sesión</a>
+            <a class="usuario-btn" href="registro.html">Crear cuenta</a>
+        </div>
 
-                    <iframe
-                        width="100%"
-                        height="250"
-                        src="https://www.youtube.com/embed/6oaEGRaW82Q"
-                        title="Cómo instalar Windows"
-                        frameborder="0"
-                        allowfullscreen>
-                    </iframe>
-                
-                    <h3>Instalar Windows</h3>
-                
-                    <p>Instalación desde cero.</p>
+        <div class="usuario-menu" id="menuLogin" style="display:none;">
+            <div class="usuario-circulo" id="circuloUsuario"></div>
+            <a class="usuario-btn" href="cuenta.html">Mi cuenta</a>
+            <button class="usuario-btn" onclick="cerrarSesion()">Cerrar sesión</button>
+        </div>
+    </header>
 
-                              <div class="video">
-                    <iframe width="100%" height="450"
-                        src="https://www.youtube.com/embed/JNv_Dchanvw"
-                        title="Tutorial Windows"
-                        frameborder="0"
-                        allowfullscreen>
-                    </iframe>
-                </div>
-                
-                <div class="video">
-                    <iframe width="100%" height="450"
-                        src="https://www.youtube.com/embed/hqX7w4-ZTkI"
-                        title="Tutorial Windows"
-                        frameborder="0"
-                        allowfullscreen>
-                    </iframe>
-                        </div>
-                        
-                    <a class="volver" href="tutoriales.html">Volver a Tutoriales</a>
-                </main>
-        
-        <footer>
-            <div class="footer-contenido">
-        
-                <div class="footer-columna">
-                    <h3>Proyecto HRA</h3>
-        
-                    <p>
-                        Web de informática creada como proyecto final de 2º SMR.
-                        Incluye noticias, tutoriales, foro y recursos técnicos.
-                    </p>
-                </div>
-        
-                <div class="footer-columna">
-                    <h3>Secciones</h3>
-        
-                    <a href="index.html">Inicio</a>
-                    <a href="noticias.html">Noticias</a>
-                    <a href="foro.html">Foro</a>
-                    <a href="tutoriales.html">Tutoriales</a>
-                </div>
-        
-                <div class="footer-columna">
-                    <h3>Acceso</h3>
-        
-                    <a href="login.html">Iniciar sesión</a>
-                    <a href="contacto.html">Contacto</a>
-                </div>
-        
+    <main>
+        <h2>Tutoriales de Windows</h2>
+
+        <p>
+            Vídeos para aprender Windows desde lo básico.
+        </p>
+
+        <div class="video-lista">
+
+            <div class="video">
+                <iframe
+                    width="100%"
+                    height="250"
+                    src="https://www.youtube.com/embed/6oaEGRaW82Q"
+                    title="Cómo instalar Windows"
+                    frameborder="0"
+                    allowfullscreen>
+                </iframe>
+
+                <h3>Instalar Windows</h3>
+
+                <p>
+                    Instalación desde cero.
+                </p>
             </div>
 
-    <div class="footer-abajo">
-        <p>
-            Proyecto HRA - 2º SMR · Hugo, Rodrigo y Antonio
-        </p>
-    </div>
-</footer>
+            <div class="video">
+                <iframe
+                    width="100%"
+                    height="250"
+                    src="https://www.youtube.com/embed/JNv_Dchanvw"
+                    title="Tutorial Windows"
+                    frameborder="0"
+                    allowfullscreen>
+                </iframe>
+
+                <h3>Configurar Windows</h3>
+
+                <p>
+                    Primeros pasos y configuración básica del sistema.
+                </p>
+            </div>
+
+            <div class="video">
+                <iframe
+                    width="100%"
+                    height="250"
+                    src="https://www.youtube.com/embed/hqX7w4-ZTkI"
+                    title="Tutorial Windows"
+                    frameborder="0"
+                    allowfullscreen>
+                </iframe>
+
+                <h3>Optimizar Windows</h3>
+
+                <p>
+                    Consejos para mejorar el rendimiento de Windows.
+                </p>
+            </div>
 
         </div>
-    </body>
 
+        <a class="volver" href="tutoriales.html">Volver a Tutoriales</a>
+    </main>
+
+    <footer>
+        <div class="footer-contenido">
+
+            <div class="footer-columna">
+                <h3>Proyecto HRA</h3>
+
+                <p>
+                    Web de informática creada como proyecto final de 2º SMR.
+                    Incluye noticias, tutoriales, foro y recursos técnicos.
+                </p>
+            </div>
+
+            <div class="footer-columna">
+                <h3>Secciones</h3>
+
+                <a href="index.html">Inicio</a>
+                <a href="noticias.html">Noticias</a>
+                <a href="foro.html">Foro</a>
+                <a href="tutoriales.html">Tutoriales</a>
+            </div>
+
+            <div class="footer-columna">
+                <h3>Acceso</h3>
+
+                <a href="login.html">Iniciar sesión</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+
+        </div>
+
+        <div class="footer-abajo">
+            <p>
+                Proyecto HRA - 2º SMR · Hugo, Rodrigo y Antonio
+            </p>
+        </div>
+    </footer>
+
+</div>
+
+<script src="login.js"></script>
+
+</body>
 </html>
