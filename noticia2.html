@@ -1,61 +1,141 @@
-<article class="noticia-detalle">
+<!DOCTYPE html>
+<html lang="es">
 
-    <img src="img/windows11.jpg" class="imagen-noticia">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <div class="contenido-noticia">
+    <title>Microsoft prepara nuevas funciones</title>
 
-        <span class="fecha-noticia">
-            28 MAYO 2026 · WINDOWS
-        </span>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-        <h2>
-            Microsoft prepara nuevas funciones para Windows 11
-        </h2>
+<body>
 
-        <p>
-            Microsoft continúa trabajando en nuevas actualizaciones para Windows 11
-            centradas en inteligencia artificial, productividad y rendimiento.
-        </p>
+<div class="pagina">
 
-        <p>
-            Entre las novedades más importantes destaca la integración de nuevas
-            herramientas impulsadas por IA que permitirán automatizar tareas
-            cotidianas dentro del sistema operativo.
-        </p>
+<header>
+    <h1>Proyecto HRA</h1>
 
-        <p>
-            La compañía también está mejorando el explorador de archivos,
-            reduciendo tiempos de carga y optimizando el consumo de memoria.
-        </p>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li><a href="foro.html">Foro</a></li>
+            <li><a href="tutoriales.html">Tutoriales</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
 
-        <h3>Nuevas herramientas de inteligencia artificial</h3>
+    <div class="usuario-menu" id="menuNoLogin">
+        <a class="usuario-btn" href="login.html">Iniciar sesión</a>
+        <a class="usuario-btn" href="registro.html">Crear cuenta</a>
+    </div>
 
-        <p>
-            Windows 11 incorporará asistentes inteligentes capaces de resumir
-            documentos, organizar ventanas automáticamente y sugerir acciones
-            según el trabajo del usuario.
-        </p>
+    <div class="usuario-menu" id="menuLogin" style="display:none;">
+        <div class="usuario-circulo" id="circuloUsuario"></div>
+        <a class="usuario-btn" href="cuenta.html">Mi cuenta</a>
+        <button class="usuario-btn" onclick="cerrarSesion()">Cerrar sesión</button>
+    </div>
+</header>
 
-        <p>
-            Estas funciones estarán integradas directamente en el sistema,
-            aprovechando los nuevos procesadores con aceleración de IA.
-        </p>
+<main class="pagina-noticia">
 
-        <h3>Mayor rendimiento y estabilidad</h3>
+    <article class="noticia-detalle">
 
-        <p>
-            Microsoft asegura que las próximas versiones mejorarán el rendimiento
-            en videojuegos, multitarea y aplicaciones profesionales.
-        </p>
+        <img src="img/noticia-microsoft.png" class="imagen-noticia">
 
-        <p class="fuente-noticia">
-            Fuente: Microsoft / Xataka
-        </p>
+        <div class="contenido-noticia">
 
-        <a class="volver" href="index.html">
-            Volver al inicio
-        </a>
+            <span class="fecha-noticia">
+                28 MAYO 2026 · WINDOWS 11
+            </span>
+
+            <h2>
+                Microsoft prepara nuevas funciones para Windows 11
+            </h2>
+
+            <p>
+                Microsoft continúa trabajando en nuevas actualizaciones
+                para Windows 11 centradas en productividad y rendimiento.
+            </p>
+
+            <p>
+                La compañía quiere incorporar nuevas herramientas basadas
+                en inteligencia artificial para mejorar la experiencia del usuario.
+            </p>
+
+            <p>
+                Entre las novedades destacan mejoras en el explorador de archivos,
+                optimización del sistema y nuevas opciones de personalización.
+            </p>
+
+            <p>
+                Microsoft también está desarrollando funciones inteligentes
+                capaces de automatizar tareas dentro del sistema operativo.
+            </p>
+
+            <p>
+                Estas actualizaciones llegarán progresivamente durante los próximos meses
+                a millones de usuarios de Windows 11 en todo el mundo.
+            </p>
+
+            <p class="fuente-noticia">
+                Fuente: Microsoft / Xataka
+            </p>
+
+            <a class="volver" href="index.html">
+                Volver al inicio
+            </a>
+
+        </div>
+
+    </article>
+
+</main>
+
+<footer>
+    <div class="footer-contenido">
+
+        <div class="footer-columna">
+            <h3>Proyecto HRA</h3>
+
+            <p>
+                Web de informática creada como proyecto final de 2º SMR.
+                Incluye noticias, tutoriales, foro y recursos técnicos.
+            </p>
+        </div>
+
+        <div class="footer-columna">
+            <h3>Secciones</h3>
+
+            <a href="index.html">Inicio</a>
+            <a href="noticias.html">Noticias</a>
+            <a href="foro.html">Foro</a>
+            <a href="tutoriales.html">Tutoriales</a>
+        </div>
+
+        <div class="footer-columna">
+            <h3>Acceso</h3>
+
+            <a href="login.html">Iniciar sesión</a>
+            <a href="contacto.html">Contacto</a>
+        </div>
 
     </div>
 
-</article>
+    <div class="footer-abajo">
+        <p>
+            Proyecto HRA - 2º SMR · Hugo, Rodrigo y Antonio
+        </p>
+    </div>
+</footer>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
+<script src="login.js"></script>
+
+</body>
+</html>
