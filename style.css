@@ -385,3 +385,85 @@ header {
 #mensajesForo {
     margin-top: 22px;
 }
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 18px 16px;
+        position: static;
+    }
+
+    header h1 {
+        font-size: 24px;
+        margin-bottom: 16px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    nav ul li a {
+        width: 100%;
+        text-align: center;
+        padding: 11px;
+    }
+
+    .usuario-menu {
+        position: static;
+        margin-top: 16px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    main {
+        margin: 20px 12px;
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    h3 {
+        font-size: 19px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .card {
+        padding: 18px;
+    }
+
+    .foro-caja {
+        padding: 16px;
+    }
+
+    form {
+        width: 100%;
+        max-width: 100%;
+        padding: 18px;
+    }
+
+    input,
+    textarea {
+        font-size: 16px;
+    }
+
+    .video-lista {
+        grid-template-columns: 1fr;
+    }
+
+    .video iframe {
+        height: 220px;
+    }
+
+    footer {
+        padding: 16px;
+        text-align: center;
+    }
+}
