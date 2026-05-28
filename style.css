@@ -53,13 +53,6 @@ header {
     color: white;
     padding: 24px 40px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
-
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-
-    z-index: 1000;
 }
 
 header h1 {
@@ -111,7 +104,6 @@ main {
     padding: 10px 32px;
     background: transparent;
     border: none;
-    padding-top: 140px;
 }
 
 h2 {
